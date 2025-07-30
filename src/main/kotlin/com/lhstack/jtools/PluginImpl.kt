@@ -2,7 +2,6 @@ package com.lhstack.jtools
 
 import ai.grazie.utils.mpp.UUID
 import com.intellij.openapi.Disposable
-import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.util.Disposer
 import com.lhstack.tools.plugins.Helper
@@ -40,9 +39,6 @@ class PluginImpl : IPlugin {
         DISPOSABLES.remove(pluginPanel.name)?.let { Disposer.dispose(it) }
     }
 
-    override fun tabPanelActions(project: Project?): MutableList<AnAction> {
-        return super.tabPanelActions(project)
-    }
 
     override fun supportMultiOpens(): Boolean = true
 

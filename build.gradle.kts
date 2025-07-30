@@ -16,6 +16,9 @@ repositories {
     maven("https://maven.aliyun.com/repository/public/")
     mavenCentral()
 }
+dependencies {
+    implementation(files("C:/Users/lhstack/.jtools/sdk/sdk.jar"))
+}
 
 intellij {
     version.set("2022.3")
@@ -23,9 +26,6 @@ intellij {
     plugins.set(listOf("com.intellij.java"))
 }
 
-dependencies {
-    implementation(files("C:/Users/1/.jtools/sdk/sdk.jar"))
-}
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
